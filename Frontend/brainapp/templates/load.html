@@ -1,0 +1,49 @@
+-->
+{% extends 'base1.html' %}
+{% block code %}
+<style>
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .centered {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  </style>
+ <div class="container">
+  <img src="/static/assets/img/br5.jpg" style="width: 1000px; height: 720px; border-radius:750% / 400%;">
+  <div class="centered" style="color: black;"> <form action="" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <center >
+        <label for="myfile" style="color: white;">Select files:</label>
+        <input type="file"  id="myfile" name="myfile" multiple style="color: white;"><br><br>
+     
+     <button type="submit" class="btn btn-primary" >Submit</button>
+     </center>
+             {% if res %}
+              <center><h3>{{res}}</h3></center>
+              {% endif %}
+     <div class="container">
+        {% csrf_token %}
+        <div class="providing_section layout_padding">
+           
+        </div>
+
+
+
+<!--Login--> 
+<div class="container py-5">
+
+  </div>
+  </form>
+</div>
+</div>
+ 
+ <!-- ======= Hero Section ======= -->
+ 
+
+ {% endblock %}

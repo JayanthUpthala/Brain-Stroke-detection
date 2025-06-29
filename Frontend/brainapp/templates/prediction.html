@@ -1,0 +1,99 @@
+
+{% extends 'base1.html' %}
+{% block code %}
+<style>
+    .container {
+      position: relative;
+      text-align: center;
+      color: black;
+    }
+    
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .top-left {
+        position: absolute;
+        top: 10px;
+        left: 250px;
+  }
+      
+    </style>
+    
+   
+ <div class="container">
+  <img src="/static/assets/img/br5.jpg" style="width: 1000px; height: 670px; border-radius:750% / 400%;">
+  <div class="centered" style="color: black;"> 
+    
+  <form action=""  method="post">
+    {% csrf_token %}
+    
+    <div class="top-left" >
+        <H2><b>{{msg}}</b></H2>
+    </div>
+    <h4></h4>
+
+    <div class="centered">
+    <label for="PatientNumber" style="color :black">PatientNumber</label>
+    <br>
+    <input type="float" placeholder="PatientNumber" id="f1" name="f1"  style="height: 40px; width: 400px;"> 
+    <br>
+
+    <label for="SliceNumber" style="color :black;">SliceNumber</label>
+        <br>
+    <input type="float" placeholder="SliceNumber" id="f2" name="f2"  style="height: 40px; width: 400px;">
+    <br>
+
+    <label for="Intraventricular" style="color :black;">Intraventricular</label>
+        <br>
+    <input type="float" placeholder="Intraventricular" id="f3" name="f3"  style="height: 40px; width: 400px;">
+    <br>
+
+    <label for="Intraparenchymal" style="color :black;">Intraparenchymal</label>
+        <br>
+    <input type="float" placeholder="Intraparenchymal" id="f4" name="f4"  style="height: 40px; width: 400px;">
+    <br>
+
+    <label for="Subarachnoid" style="color :black;">Subarachnoid:</label>
+        <br>
+    <input type="float" placeholder="Subarachnoid" id="f5" name="f5"  style="height: 40px; width: 400px;">
+    <br>
+
+    <label for="Epidural" style="color :black;">Epidural</label>
+        <br>
+    <input type="float" placeholder="Epidural" id="f6" name="f6"  style="height: 40px; width: 400px;">
+    <br>
+    
+    <label for="Subdural" style="color :black;">Subdural</label>
+    <br>
+    <input type="float" placeholder="Subdural" id="f7" name="f7"  style="height: 40px; width: 400px;">
+    <br>
+
+    <label for="No_Hemorrhage" style="color :black;">No_Hemorrhage</label>
+    <br>
+    <input type="float" placeholder="No_Hemorrhage" id="f8" name="f8"  style="height: 40px; width: 400px;">
+    <br>
+
+    </div>
+    
+    
+    </table>
+    <br>
+    <br>
+</div>
+    <button type="submit" class="btn btn-primary" style="width: 500px; border-radius: 30px;">PREDICT</button>
+  
+</div>
+</div>
+</form>  
+
+
+</div>
+</div>
+ 
+ <!-- ======= Hero Section ======= -->
+ 
+
+ {% endblock %}
